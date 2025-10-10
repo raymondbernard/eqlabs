@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EQLabs.ai — Blog</title>
+  <meta name="description" content="EQLabs.ai blog — research notes on deterministic evaluation and LLM reasoning." />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-black/10">
+  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-7 w-7 rounded-lg bg-black"></div>
+          <span class="font-semibold tracking-tight">EQLabs.ai</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/index.html#about" class="hover:text-black">About</a>
+          <a href="/index.html#research" class="hover:text-black">Research</a>
+          <a href="/index.html#video" class="hover:text-black">Video</a>
+          <a href="/blog/" class="hover:text-black">Blog</a>
+          <a href="/index.html#benchmark" class="hover:text-black">Benchmark</a>
+          <a href="/index.html#invest" class="hover:text-black">Invest</a>
+          <a href="/index.html#contact" class="hover:text-black">Contact</a>
+        </div>
+        <a href="/index.html#invest" class="rounded-full bg-black text-white px-4 py-2 text-sm font-medium hover:bg-slate-900">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="max-w-3xl">
+        <p class="text-xs uppercase tracking-wider text-slate-500">EQLabs.ai</p>
+        <h1 class="mt-3 text-4xl md:text-5xl font-semibold leading-tight">Blog</h1>
+        <p class="mt-4 text-lg text-slate-700">Research notes on deterministic evaluation, LLM reasoning, and engineering.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a class="rounded-2xl border border-slate-200 p-6 hover:border-slate-300 block" target="_blank" href="https://raymondbernard.github.io/">
+          <div class="text-xs uppercase tracking-wider text-slate-500">LLM evaluation</div>
+          <h3 class="mt-2 text-lg font-medium">LLM Hallucinations</h3>
+          <p class="mt-2 text-sm text-slate-700">Reducing hallucinations with Reflection LLM and vector stores.</p>
+          <div class="mt-4 text-xs text-slate-500">Read on raymonbernard.github.io ↗</div>
+        </a>
+
+        <a class="rounded-2xl border border-slate-200 p-6 hover:border-slate-300 block" target="_blank" href="https://raymondbernard.github.io/">
+          <div class="text-xs uppercase tracking-wider text-slate-500">Open source LLMs</div>
+          <h3 class="mt-2 text-lg font-medium">Moa + Star = Better Open Source LLM (part 3)</h3>
+          <p class="mt-2 text-sm text-slate-700">Notes on improving open source LLM performance.</p>
+          <div class="mt-4 text-xs text-slate-500">Read on raymonbernard.github.io ↗</div>
+        </a>
+
+        <a class="rounded-2xl border border-slate-200 p-6 hover:border-slate-300 block" target="_blank" href="https://raymondbernard.github.io/">
+          <div class="text-xs uppercase tracking-wider text-slate-500">Mixture of Agents</div>
+          <h3 class="mt-2 text-lg font-medium">Open‑WebUI Mixture of Agents (part 2)</h3>
+          <p class="mt-2 text-sm text-slate-700">Building multi‑agent workflows and evaluation pathways.</p>
+          <div class="mt-4 text-xs text-slate-500">Read on raymonbernard.github.io ↗</div>
+        </a>
+
+        <a class="rounded-2xl border border-slate-200 p-6 hover:border-slate-300 block" target="_blank" href="https://raymondbernard.github.io/">
+          <div class="text-xs uppercase tracking-wider text-slate-500">Mixture of Agents</div>
+          <h3 class="mt-2 text-lg font-medium">Mixture of Agents (part 1)</h3>
+          <p class="mt-2 text-sm text-slate-700">Foundations and early experiments.</p>
+          <div class="mt-4 text-xs text-slate-500">Read on raymonbernard.github.io ↗</div>
+        </a>
+
+        <a class="rounded-2xl border border-slate-200 p-6 hover:border-slate-300 block" target="_blank" href="https://raymondbernard.github.io/">
+          <div class="text-xs uppercase tracking-wider text-slate-500">Hardware</div>
+          <h3 class="mt-2 text-lg font-medium">Instruct on Intel Max Series GPUs</h3>
+          <p class="mt-2 text-sm text-slate-700">Notes on training and inference on Intel accelerators.</p>
+          <div class="mt-4 text-xs text-slate-500">Read on raymonbernard.github.io ↗</div>
+        </a>
+      </div>
+
+      <div class="mt-10">
+        <a class="inline-block text-sm text-slate-700 hover:underline" target="_blank" href="https://raymondbernard.github.io/">See all posts ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 border-t border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div>&copy; <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" target="_blank" href="https://arxiv.org/abs/2501.00257">arXiv</a>
+        <a class="hover:underline" target="_blank" href="https://www.linkedin.com/groups/">LinkedIn</a>
+        <a class="hover:underline" href="mailto:info@eqlabs.ai">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
+
