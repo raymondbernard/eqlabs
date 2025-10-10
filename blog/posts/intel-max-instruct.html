@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instruct on Intel Max Series GPUs — EQLabs.ai Blog</title>
+  <meta name="description" content="Notes on training and inference on Intel accelerators." />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-black/10">
+  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-7 w-7 rounded-lg bg-black"></div>
+          <span class="font-semibold tracking-tight">EQLabs.ai</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/blog/" class="hover:text-black">Blog</a>
+          <a href="/index.html#research" class="hover:text-black">Research</a>
+          <a href="/index.html#invest" class="hover:text-black">Invest</a>
+          <a href="/index.html#contact" class="hover:text-black">Contact</a>
+        </div>
+        <a href="/index.html#invest" class="rounded-full bg-black text-white px-4 py-2 text-sm font-medium hover:bg-slate-900">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="py-14 md:py-20">
+    <div class="mx-auto max-w-3xl px-4">
+      <a href="/blog/" class="text-sm text-slate-600 hover:underline">← Back to Blog</a>
+      <h1 class="mt-4 text-3xl md:text-4xl font-semibold">Instruct on Intel Max Series GPUs</h1>
+      <p class="mt-2 text-slate-600">Notes on training and inference on Intel accelerators.</p>
+
+      <div class="prose prose-slate mt-8 max-w-none">
+        <p>We document a lightweight instruct pipeline targeting Intel Max Series GPUs, focusing on portability and performance. Topics include environment setup, model compatibility, and reproducible evaluation with EQUATOR.</p>
+      </div>
+
+      <div class="mt-8 rounded-xl border border-slate-200 p-4 text-sm flex items-center justify-between">
+        <span class="text-slate-600">Original publication</span>
+        <a class="rounded-full border border-slate-300 px-4 py-2 hover:border-slate-400" target="_blank" href="https://raymondbernard.github.io/">Read on raymondbernard.github.io ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="py-12 border-t border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div>&copy; <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" target="_blank" href="https://arxiv.org/abs/2501.00257">arXiv</a>
+        <a class="hover:underline" target="_blank" href="https://www.linkedin.com/groups/">LinkedIn</a>
+        <a class="hover:underline" href="mailto:info@eqlabs.ai">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
+
