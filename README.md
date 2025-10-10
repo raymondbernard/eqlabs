@@ -31,7 +31,7 @@ Key features:
 
 ## Deployment
 
-This site is deployed on GitHub Pages at: https://raymondbernard.github.io/eqlabsweb/
+This site is deployed on GitHub Pages at: https://raymondbernard.github.io/EQLabs.ai/
 
 ### Custom Domain Setup
 
