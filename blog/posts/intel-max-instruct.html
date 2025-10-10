@@ -36,7 +36,18 @@
       <p class="mt-2 text-slate-600">Notes on training and inference on Intel accelerators.</p>
 
       <div class="prose prose-slate mt-8 max-w-none">
-        <p>We document a lightweight instruct pipeline targeting Intel Max Series GPUs, focusing on portability and performance. Topics include environment setup, model compatibility, and reproducible evaluation with EQUATOR.</p>
+        <h2 id="overview">Overview</h2>
+        <p>A lightweight instruct pipeline targeting Intel Max Series GPUs with focus on portability and performance. Covers environment setup, model compatibility, and reproducible evaluation with EQUATOR.</p>
+        <h3 id="setup">Setup</h3>
+        <ul>
+          <li>Install drivers and oneAPI runtime/toolkits</li>
+          <li>Prepare Python env and dependencies</li>
+          <li>Verify device visibility and memory</li>
+        </ul>
+        <h3 id="training-inference">Training &amp; Inference</h3>
+        <p>Demonstrates instruct fine‑tuning and optimized inference paths. Measure throughput, latency, and accuracy with deterministic criteria.</p>
+        <h3 id="reproducibility">Reproducibility</h3>
+        <p>Use fixed seeds, pinned versions, and dataset versioning. Store EQUATOR logs per run to compare hardware/software settings over time.</p>
       </div>
 
       <div class="mt-8 rounded-xl border border-slate-200 p-4 text-sm flex items-center justify-between">

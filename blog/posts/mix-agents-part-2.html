@@ -36,7 +36,44 @@
       <p class="mt-2 text-slate-600">Building multi‑agent workflows and evaluation pathways.</p>
 
       <div class="prose prose-slate mt-8 max-w-none">
-        <p>We walk through a multi‑agent setup in Open‑WebUI, detailing roles, messaging, and coordination patterns. Evaluation hooks connect to EQUATOR to measure correctness, completeness, and groundedness at each step.</p>
+        <p>Youtube Video : <a href="https://youtu.be/KxT7lHaPDJ4">https://youtu.be/KxT7lHaPDJ4</a></p>
+        <h2 id="introduction">Introduction</h2>
+        <p>The Mixture‑of‑Agents (MoA) methodology has demonstrated state‑of‑the‑art performance using open‑source models. We created two pipelines (Groq and Ollama) for Open‑WebUI. These pipelines serve as UI‑agnostic, OpenAI‑compatible plugin frameworks.</p>
+        <p>Open‑WebUI is an extensible, feature‑rich, and user‑friendly self‑hosted WebUI designed to operate entirely offline. It supports various LLM runners, including Ollama and OpenAI‑compatible APIs. Here we integrate MoA into this platform and connect evaluation hooks to EQUATOR for deterministic checks (correctness, completeness, groundedness).</p>
+        <h2 id="install-open-webui">Install Open‑WebUI</h2>
+        <pre><code class="language-bash"># Windows
+py -m venv .venv
+.venv\Scripts\activate
+
+git clone https://github.com/open-webui/open-webui.git
+cd open-webui
+pip install -r requirements.txt
+open-webui serve  # then visit http://localhost:8080
+</code></pre>
+        <h2 id="install-pipelines">Install Pipelines</h2>
+        <pre><code class="language-bash">git clone https://github.com/open-webui/pipelines.git
+cd pipelines
+pip install -r requirements.txt
+
+# Create .env (use your own keys)
+# GROQ_API_BASE_1=https://api.groq.com/openai/v1
+# GROQ_API_KEY_1=&lt;your key&gt;
+
+# Windows
+start.bat
+
+# Linux
+sh start.sh
+</code></pre>
+        <h2 id="configure-moa">Configure MoA (Groq)</h2>
+        <p>In Open‑WebUI admin settings, install the MoA Groq pipeline via the GitHub URL. Configure models/keys in <code>.env</code>. The pipeline fans out your prompt to three reference models, aggregates responses, then synthesizes a final answer with an aggregator model.</p>
+        <h3 id="key-components">Key components to verify</h3>
+        <ol>
+          <li>Send the prompt to 3 reference models</li>
+          <li>Aggregate the responses</li>
+          <li>Use an aggregator agent to synthesize the final response</li>
+        </ol>
+        <p>Evaluation hooks feed into EQUATOR so you can log per‑criterion outcomes for auditability.</p>
       </div>
 
       <div class="mt-8 rounded-xl border border-slate-200 p-4 text-sm flex items-center justify-between">

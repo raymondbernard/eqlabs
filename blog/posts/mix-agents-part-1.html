@@ -36,7 +36,15 @@
       <p class="mt-2 text-slate-600">Foundations and early experiments.</p>
 
       <div class="prose prose-slate mt-8 max-w-none">
-        <p>We introduce a simple mixture‑of‑agents setup that composes specialized models into a single pipeline. Key ideas include role specialization, arbitration, and deterministic evaluation with EQUATOR to ensure that the composed system remains grounded and correct.</p>
+        <h3 id="how-mixture-of-agents-enhances-large-language-model-capabilities">How Mixture‑of‑Agents Enhances Large Language Model Capabilities</h3>
+        <h2 id="introduction">Introduction</h2>
+        <p>LLMs are powerful but varied. Mixture‑of‑Agents (MoA) composes specialized models into a layered pipeline. Each agent consumes prior outputs as auxiliary context, improving robustness and quality through collaboration.</p>
+        <h2 id="collaborativeness">Collaborativeness</h2>
+        <p>Agents often perform better when they can reference one another’s outputs. MoA formalizes this via “proposer” agents that generate candidates and an “aggregator” that synthesizes a final answer.</p>
+        <h2 id="benchmarks">Benchmarks</h2>
+        <p>MoA variants have shown strong results on AlpacaEval 2.0, MT‑Bench, and FLASK. Cost‑quality trade‑offs can be tuned by adjusting layers and agent mixes.</p>
+        <h2 id="applications">Applications</h2>
+        <p>Run MoA on cloud APIs or locally. Pair with EQUATOR to log deterministic criteria per step: correctness, completeness, groundedness.</p>
       </div>
 
       <div class="mt-8 rounded-xl border border-slate-200 p-4 text-sm flex items-center justify-between">

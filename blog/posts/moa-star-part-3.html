@@ -36,7 +36,52 @@
       <p class="mt-2 text-slate-600">Experiments and lessons learned for improving open source LLM performance.</p>
 
       <div class="prose prose-slate mt-8 max-w-none">
-        <p>We summarize an iteration of techniques combining the Moa approach with Star‑style improvements to stabilize training and inference quality. Topics include data curation, objective shaping, and evaluation with deterministic criteria aligned to EQUATOR.</p>
+        <p><img src="/images/MoA-Star.png" alt="alt text"></p>
+        <h1 id="introduction">Introduction</h1>
+        <p>Artificial Intelligence (AI) has made significant strides, particularly with the advent of large language models (LLMs). These models, while powerful, often require innovative methods to harness their full potential, especially in complex reasoning tasks. This blog post explores two advanced methodologies, Mixture of Agents (MoA) and Self-Taught Reasoner (STaR), and how their integration can push the boundaries of AI capabilities.</p>
+        <h2 id="mixture-of-agents-moa-methodology">Mixture of Agents (MoA) Methodology</h2>
+        <p>The Mixture of Agents (MoA) methodology is designed to leverage the strengths of multiple language models by creating a collaborative framework. This approach involves multiple agents working together in layers to produce more refined and accurate responses.</p>
+        <h3 id="key-concepts-of-moa">Key Concepts of MoA</h3>
+        <ul>
+          <li><strong>Layered Structure</strong>: MoA operates through multiple layers, where each layer consists of several agents. The output of agents from one layer is used as input for agents in the next layer, allowing for iterative improvement.</li>
+          <li><strong>Collaborative Enhancement</strong>: By referencing and building upon each other’s outputs, agents can produce higher quality responses. This collaborative process ensures that different perspectives and strengths of each model are effectively utilized.</li>
+          <li><strong>Diversity and Performance</strong>: The diversity of models within each layer contributes to robust performance, as it combines the unique capabilities of various agents to tackle complex tasks.</li>
+        </ul>
+        <h2 id="self-taught-reasoner-star-methodology">Self-Taught Reasoner (STaR) Methodology</h2>
+        <p>The Self-Taught Reasoner (STaR) methodology focuses on improving a model’s reasoning abilities through iterative self-improvement. It is particularly effective for tasks that require step-by-step reasoning, such as mathematical problems and commonsense question-answering.</p>
+        <h3 id="key-concepts-of-star">Key Concepts of STaR</h3>
+        <ul>
+          <li><strong>Rationale Generation</strong>: STaR emphasizes the generation of intermediate reasoning steps, known as rationales, before arriving at a final answer. This process enhances the model’s ability to handle complex reasoning tasks.</li>
+          <li><strong>Bootstrapping Reasoning</strong>: The STaR approach involves a loop where the model generates rationales for a set of problems, fine-tunes on the correct rationales, and then uses the improved model to generate new rationales. This iterative process continues, progressively enhancing the model’s reasoning capabilities.</li>
+          <li><strong>Rationalization</strong>: For problems where the model’s initial answer is incorrect, STaR introduces the concept of rationalization. This involves providing the correct answer and asking the model to generate a rationale for it. This backward reasoning helps in fine-tuning the model on difficult problems it initially failed to solve.</li>
+        </ul>
+        <h2 id="weaknesses-of-llms-and-our-approach">Weaknesses of LLMs and Our Approach</h2>
+        <p>A recent paper, <em>Easy Problems That LLMs Get Wrong</em> by Williams and Huckle (2024), introduces a comprehensive Linguistic Benchmark designed to evaluate the limitations of LLMs in domains such as logical reasoning, spatial intelligence, and linguistic understanding. Here are some of the key weaknesses highlighted in the paper and how our approach addresses them:</p>
+        <ul>
+          <li><strong>Linguistic Understanding</strong>: LLMs often misinterpret or overlook nuanced meanings in human language, leading to inaccuracies. Our MoA approach enhances linguistic understanding by leveraging multiple agents to provide diverse perspectives and refined outputs.</li>
+          <li><strong>Common Sense</strong>: LLMs lack embodied experience, which is crucial for common sense reasoning. STaR’s iterative self-improvement and rationale generation help models build a better understanding of common sense by learning from previous mistakes and correct answers.</li>
+          <li><strong>Contextual Understanding</strong>: LLMs struggle with context-sensitive reasoning. The collaborative enhancement in MoA ensures that context is better understood and maintained across multiple agents.</li>
+          <li><strong>Visual-Spatial Reasoning</strong>: LLMs lack spatial awareness, which is essential for visual-spatial reasoning. While this remains a challenge, integrating MoA can help by allowing agents specialized in spatial reasoning to contribute to the overall output.</li>
+          <li><strong>Mathematical Reasoning</strong>: LLMs often fail at simple mathematical tasks. STaR’s iterative process of generating rationales and fine-tuning on correct answers helps improve mathematical reasoning over time.</li>
+          <li><strong>Relational Understanding</strong>: Understanding relationships between entities is challenging for LLMs. MoA’s layered structure allows for a more nuanced interpretation of relational contexts by aggregating inputs from multiple agents.</li>
+          <li><strong>Logical Reasoning</strong>: LLMs can mimic reasoning but lack reliability. Combining MoA and STaR improves logical reasoning by continuously refining the models’ outputs through collaboration and self-improvement.</li>
+        </ul>
+        <p>By integrating MoA and STaR, we create a robust framework that addresses these weaknesses. The collaborative and iterative nature of our approach ensures that models continuously improve and provide more accurate and reliable outputs.</p>
+        <h2 id="current-progress-and-future-work">Current Progress and Future Work</h2>
+        <p>I am currently testing the integration of these concepts and have a working code. I will be releasing a video demonstration soon, showcasing the implementation and results of this integration.</p>
+        <p>Stay tuned for our follow-up post where we will walk through the coding process of integrating MoA and STaR in a Python program.</p>
+        <h2 id="references-">References :</h2>
+        <ul>
+          <li>
+            <p>Zelikman, E., Wu, Y., Mu, J., &amp; Goodman, N. D. (2022). STaR: Self-Taught Reasoner – Bootstrapping Reasoning With Reasoning. <em>arXiv preprint arXiv:2203.14465</em>. <a href="https://doi.org/10.48550/arXiv.2203.14465">https://doi.org/10.48550/arXiv.2203.14465</a></p>
+          </li>
+          <li>
+            <p>Wang, J., Wang, J., Athiwaratkun, B., Zhang, C., &amp; Zou, J. (2024). Mixture-of-Agents Enhances Large Language Model Capabilities. <em>arXiv preprint arXiv:2406.04692</em>. <a href="https://doi.org/10.48550/arXiv.2406.04692">https://doi.org/10.48550/arXiv.2406.04692</a></p>
+          </li>
+          <li>
+            <p>Williams, S., &amp; Huckle, J. (2024). Easy Problems That LLMs Get Wrong. <em>arXiv preprint arXiv:2405.19616</em>. <a href="https://doi.org/10.48550/arXiv.2405.19616">https://doi.org/10.48550/arXiv.2405.19616</a></p>
+          </li>
+        </ul>
       </div>
 
       <div class="mt-8 rounded-xl border border-slate-200 p-4 text-sm flex items-center justify-between">
