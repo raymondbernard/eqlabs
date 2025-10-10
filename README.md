@@ -33,19 +33,9 @@ Key features:
 
 This site is deployed on GitHub Pages at: https://raymondbernard.github.io/EQLabs.ai/
 
-### Custom Domain Setup
+### Custom Domain (optional)
 
-To use the custom domain `eqlabs.ai`:
-
-1. Add a `CNAME` file with your domain
-2. Configure DNS records at your domain registrar:
-   - Add an A record pointing to GitHub Pages IPs:
-     - 185.199.108.153
-     - 185.199.109.153
-     - 185.199.110.153
-     - 185.199.111.153
-   - Or add a CNAME record for `www` pointing to `raymondbernard.github.io`
-3. Enable HTTPS in repository settings → Pages
+If you later want a custom domain, re-add a `CNAME` and configure DNS. For now, this site uses the default GitHub Pages URL.
 
 ## Local Development
 
