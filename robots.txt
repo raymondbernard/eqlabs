@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow local/live-reload and legacy dupes if any
+Disallow: /ananke/
+Disallow: /livereload.js
+
+Sitemap: https://eqlabs.ai/sitemap.xml
+
+

@@ -1,0 +1,14 @@
+{
+  "name": "eqlabsweb",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "seo:test": "node scripts/seo-check.js"
+  },
+  "devDependencies": {
+    "cheerio": "1.0.0-rc.12",
+    "fast-glob": "3.3.2"
+  }
+}
+
+

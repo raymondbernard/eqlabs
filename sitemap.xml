@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://eqlabs.ai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eqlabs.ai/founders-circle.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eqlabs.ai/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://eqlabs.ai/blog/posts/llm-hallucinations.html</loc>
+  </url>
+  <url>
+    <loc>https://eqlabs.ai/blog/posts/mix-agents-part-1.html</loc>
+  </url>
+  <url>
+    <loc>https://eqlabs.ai/blog/posts/mix-agents-part-2.html</loc>
+  </url>
+  <url>
+    <loc>https://eqlabs.ai/blog/posts/moa-star-part-3.html</loc>
+  </url>
+  <url>
+    <loc>https://eqlabs.ai/blog/posts/intel-max-instruct.html</loc>
+  </url>
+</urlset>
+
+
