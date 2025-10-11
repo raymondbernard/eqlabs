@@ -31,11 +31,22 @@ Key features:
 
 ## Deployment
 
-This site is deployed on GitHub Pages at: https://raymondbernard.github.io/EQLabs.ai/
+This site can be deployed on GitHub Pages or any static host.
 
-### Custom Domain (optional)
+### Custom Domain
 
-If you later want a custom domain, re-add a `CNAME` and configure DNS. For now, this site uses the default GitHub Pages URL.
+To use a custom domain:
+
+1. Add a `CNAME` file at the repo root containing your domain (already added: `eqlabs.ai`).
+2. In your DNS provider, create these records:
+   - A @ → 185.199.108.153
+   - A @ → 185.199.109.153
+   - A @ → 185.199.110.153
+   - A @ → 185.199.111.153
+   - CNAME www → `<your-username>.github.io` (or apex → `ALIAS/ANAME` to the same, if supported)
+3. In the repository settings → Pages, set the custom domain to `eqlabs.ai` and enable Enforce HTTPS.
+
+Propagation can take up to 24 hours.
 
 ## Local Development
 
