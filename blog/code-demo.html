@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code Highlight Demo</title>
+  <!-- Include highlight.js via snippet file if your server supports includes -->
+  <!--#include file="/blog/highlight.html" -->
+</head>
+<body>
+  <main style="max-width: 800px; margin: 40px auto; padding: 0 16px; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;">
+    <h1>Code Highlight Demo</h1>
+    <p>This page demonstrates syntax highlighting using highlight.js. If you see colored code below, it works.</p>
+
+    <h2>Python</h2>
+    <pre><code class="language-python">def greet(name: str) -> str:
+    return f"Hello, {name}!"</code></pre>
+
+    <h2>Bash</h2>
+    <pre><code class="language-bash">mkdir project
+cd project
+python -m venv .venv
+.venv/\Scripts/activate  # Windows</code></pre>
+
+    <h2>INI</h2>
+    <pre><code class="language-ini">APP_ENV=production
+LOG_LEVEL=info
+PORT=8080</code></pre>
+
+    <h2>From Blog (Python)</h2>
+    <pre><code class="language-python">import ollama
+import chromadb
+
+client = chromadb.Client()
+convo = []
+
+# Using LLama3 to generate responses without vector store context
+def stream_response(prompt):
+    convo.append({'role': 'user', 'content': prompt})
+    response = ''
+    stream = ollama.chat(model='llama3', messages=convo, stream=True)
+    for chunk in stream:
+        content = chunk['message']['content']
+        response += content
+        print(content, end='', flush=True)
+    convo.append({'role': 'assistant', 'content': response})</code></pre>
+  </main>
+
+  <!-- Fallback include if server-side includes are not enabled -->
+  <script>
+    (function injectHighlight() {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css';
+      document.head.appendChild(link);
+      var core = document.createElement('script');
+      core.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js';
+      core.onload = function () {
+        var langs = ['python','bash','ini'];
+        langs.forEach(function(lang){
+          var s = document.createElement('script');
+          s.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/' + lang + '.min.js';
+          document.body.appendChild(s);
+        });
+        setTimeout(function(){
+          if (window.hljs && hljs.highlightAll) hljs.highlightAll();
+        }, 400);
+      };
+      document.body.appendChild(core);
+    })();
+  </script>
+</body>
+</html>
