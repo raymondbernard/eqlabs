@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>EQLabs.ai — Request a demo</title>
+  <meta name="description" content="Request a demo of EQLabs' deterministic LLM evaluation benchmark." />
+  <meta property="og:title" content="EQLabs.ai — Request a demo" />
+  <meta property="og:description" content="See how deterministic evaluation can improve LLM reasoning quality." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-black/10">
+  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-7 w-7 rounded-lg bg-black"></div>
+          <span class="font-semibold tracking-tight">EQLabs.ai</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/index.html#about" class="hover:text-black">About</a>
+          <a href="/index.html#research" class="hover:text-black">Research</a>
+          <a href="/index.html#benchmark" class="hover:text-black">Benchmark</a>
+          <a href="/index.html#invest" class="hover:text-black">Invest</a>
+          <a href="/index.html#contact" class="hover:text-black">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-16 md:py-24">
+    <div class="mx-auto max-w-xl px-4">
+      <h1 class="text-3xl md:text-4xl font-semibold">Request a demo</h1>
+      <p class="mt-3 text-slate-700">Share a few details and we’ll follow up to schedule a walkthrough of our
+        deterministic evaluation benchmark and research tools.</p>
+
+      <form id="demoForm" class="mt-8 space-y-4" onsubmit="return submitDemo(event)">
+        <div>
+          <label for="name" class="block text-sm text-slate-600">Name</label>
+          <input id="name" name="name" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm text-slate-600">Work email</label>
+          <input id="email" name="email" type="email" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+        </div>
+        <div>
+          <label for="org" class="block text-sm text-slate-600">Organization</label>
+          <input id="org" name="org" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+        </div>
+        <div>
+          <label for="use" class="block text-sm text-slate-600">Primary use case</label>
+          <textarea id="use" name="use" rows="4" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></textarea>
+        </div>
+        <div class="pt-2 flex items-center gap-3">
+          <button type="submit" class="rounded-full bg-black text-white px-5 py-3 text-sm font-medium hover:bg-slate-900">Request demo</button>
+          <a href="mailto:info@eqlabs.ai?subject=Benchmark%20demo%20request" class="text-sm text-slate-700 hover:underline">Or email us directly</a>
+        </div>
+      </form>
+
+      <p class="mt-6 text-xs text-slate-500">We’re pre‑seed. For investment or partnerships, contact <a class="hover:underline" href="mailto:invest@eqlabs.ai">invest@eqlabs.ai</a>.</p>
+    </div>
+  </main>
+
+  <footer class="py-12 border-t border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div>&copy; <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" target="_blank" href="https://arxiv.org/abs/2501.00257">arXiv</a>
+        <a class="hover:underline" target="_blank" href="https://www.linkedin.com/groups/">LinkedIn</a>
+        <a class="hover:underline" href="mailto:info@eqlabs.ai">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function submitDemo(e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var org = document.getElementById('org').value.trim();
+      var use = document.getElementById('use').value.trim();
+      var subject = encodeURIComponent('Benchmark demo request');
+      var body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Organization: ' + org + '\n' +
+        'Use case: ' + use + '\n'
+      );
+      var mailto = 'mailto:info@eqlabs.ai?subject=' + subject + '&body=' + body;
+      window.open(mailto, '_blank');
+      window.location.href = '/demo-thanks.html';
+      return false;
+    }
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
+
