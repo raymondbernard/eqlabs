@@ -24,10 +24,9 @@ Key features:
 - Human-validated reference sets & semantic matching
 - Cost-efficient local evaluators (small LLMs)
 
-## Collaborations
+## Roots & Contributors
 
-- Columbia University
-- Vector Institute
+Founded from research and contributions by alumni of Columbia University and the Vector Institute.
 
 ## Deployment
 
