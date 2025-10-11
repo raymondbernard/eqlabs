@@ -40,7 +40,11 @@
       <p class="mt-3 text-slate-700">Share a few details and we’ll follow up to schedule a walkthrough of our
         deterministic evaluation benchmark and research tools.</p>
 
-      <form id="demoForm" class="mt-8 space-y-4" onsubmit="return submitDemo(event)">
+      <form id="demoForm" name="demo" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/demo-thanks.html" class="mt-8 space-y-4" onsubmit="return submitDemo(event)">
+        <input type="hidden" name="form-name" value="demo" />
+        <div class="hidden">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </div>
         <div>
           <label for="name" class="block text-sm text-slate-600">Name</label>
           <input id="name" name="name" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
@@ -80,6 +84,10 @@
 
   <script>
     function submitDemo(e) {
+      var isNetlify = /netlify\.app$/.test(location.hostname);
+      if (isNetlify) {
+        return true; // allow native submit for Netlify forms
+      }
       e.preventDefault();
       var name = document.getElementById('name').value.trim();
       var email = document.getElementById('email').value.trim();
