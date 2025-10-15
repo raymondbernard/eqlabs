@@ -35,6 +35,9 @@ function hasThemeLink($) {
 
     const errs = [];
     if (!hasThemeLink($)) errs.push('Missing <link rel="stylesheet" href="/assets/theme.css">');
+    const raw = $.html() || '';
+    if (/\bbackdrop-blur\b/i.test(raw)) errs.push('Uses disallowed class: backdrop-blur');
+    if (/backdrop-filter\s*:\s*[^;]*blur\(/i.test(raw)) errs.push('Uses disallowed CSS: backdrop-filter blur');
 
     if (errs.length) {
       failures++;
