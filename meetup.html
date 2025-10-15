@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>EQLabs.ai — EQUATOR Meetup & Briefing</title>
+  <meta name="description" content="Join the EQUATOR Benchmark meetup: founder briefing, protocol walkthrough, and hands-on sandbox for creators and press.">
+  <meta property="og:title" content="EQUATOR Meetup & Briefing — EQLabs.ai">
+  <meta property="og:description" content="Live walkthrough of the EQUATOR blind-study benchmark and Q&A.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://eqlabs.ai/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://eqlabs.ai/meetup.html">
+  <link rel="icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/scripts/monitor.js" defer></script>
+  <script src="/scripts/gate.js" defer></script>
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-black/10">
+  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-7 w-7 rounded-lg bg-black"></div>
+          <span class="font-semibold tracking-tight">EQLabs.ai</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/equator.html" class="hover:text-black">Equator</a>
+          <a href="/index.html#research" class="hover:text-black">Research</a>
+          <a href="/index.html#contact" class="hover:text-black">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-16 md:py-24">
+    <div class="mx-auto max-w-3xl px-4">
+      <h1 class="text-3xl md:text-4xl font-semibold">EQUATOR Meetup & Briefing</h1>
+      <p class="mt-3 text-slate-700">A private briefing for creators, journalists, and researchers. We will walk through the EQUATOR blind-study protocol, share reproducible artifacts, and co-build a demo.</p>
+
+      <div class="mt-8 rounded-2xl border border-slate-200 p-6">
+        <h2 class="text-xl font-semibold">Agenda (60 minutes)</h2>
+        <ol class="mt-3 list-decimal list-inside text-slate-700 space-y-1 text-sm">
+          <li>Thesis: why blind, binary, and deterministic</li>
+          <li>Protocol walkthrough and dataset manifest</li>
+          <li>Live demo: adjudication and logging</li>
+          <li>Q&A and partner next steps</li>
+        </ol>
+      </div>
+
+      <div class="mt-8 rounded-2xl border border-slate-200 p-6">
+        <h2 class="text-xl font-semibold">RSVP</h2>
+        <p class="mt-2 text-slate-700 text-sm">Request an invite; we’ll confirm with details and a calendar hold.</p>
+        <form id="rsvpForm" name="rsvp" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/demo-thanks.html" class="mt-4 space-y-4" onsubmit="return submitRsvp(event)">
+          <input type="hidden" name="form-name" value="rsvp">
+          <div class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></div>
+          <div>
+            <label for="name" class="block text-sm text-slate-600">Name</label>
+            <input id="name" name="name" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+          </div>
+          <div>
+            <label for="email" class="block text-sm text-slate-600">Work email</label>
+            <input id="email" name="email" type="email" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+          </div>
+          <div>
+            <label for="affil" class="block text-sm text-slate-600">Affiliation</label>
+            <input id="affil" name="affil" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+          </div>
+          <div>
+            <label for="role" class="block text-sm text-slate-600">Role</label>
+            <select id="role" name="role" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
+              <option>Journalist</option>
+              <option>YouTube Creator</option>
+              <option>Newsletter</option>
+              <option>Podcaster</option>
+              <option>Researcher</option>
+              <option>Engineer</option>
+              <option>Investor</option>
+            </select>
+          </div>
+          <div>
+            <label for="notes" class="block text-sm text-slate-600">Notes (angle, questions)</label>
+            <textarea id="notes" name="notes" rows="4" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></textarea>
+          </div>
+          <div class="text-sm text-slate-600 flex items-start gap-2">
+            <input id="privacy-consent" name="privacy-consent" type="checkbox" required class="mt-1" />
+            <label for="privacy-consent">I agree to the <a class="underline" href="/terms.html" target="_blank" rel="noopener">Terms</a> and acknowledge the <a class="underline" href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</label>
+          </div>
+          <div class="pt-2 flex items-center gap-3">
+            <button type="submit" class="rounded-full bg-black text-white px-5 py-3 text-sm font-medium hover:bg-slate-900">Request invite</button>
+            <a href="mailto:info@eqlabs.ai?subject=EQUATOR%20Meetup%20RSVP" class="text-sm text-slate-700 hover:underline">Or email us</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-12 border-t border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div>© <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" target="_blank" rel="noopener" href="https://arxiv.org/abs/2501.00257">arXiv</a>
+        <a class="hover:underline" target="_blank" rel="noopener" href="https://www.linkedin.com/groups/">LinkedIn</a>
+        <a class="hover:underline" href="mailto:info@eqlabs.ai">Email</a>
+        <a class="hover:underline" href="/privacy.html">Privacy</a>
+        <a class="hover:underline" href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function submitRsvp(e){
+      var isNetlify = /netlify\.app$/.test(location.hostname);
+      if (isNetlify) return true;
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var affil = document.getElementById('affil').value.trim();
+      var role = document.getElementById('role').value;
+      var notes = document.getElementById('notes').value.trim();
+      var subject = encodeURIComponent('EQUATOR Meetup RSVP');
+      var body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nAffiliation: '+affil+'\nRole: '+role+'\nNotes: '+notes+'\n');
+      var mailto = 'mailto:info@eqlabs.ai?subject='+subject+'&body='+body;
+      window.open(mailto,'_blank');
+      window.location.href = '/demo-thanks.html';
+      return false;
+    }
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+
+</body></html>
+

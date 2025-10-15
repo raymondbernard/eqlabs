@@ -5,6 +5,6 @@ Allow: /
 Disallow: /ananke/
 Disallow: /livereload.js
 
-Sitemap: https://www.eqlabs.ai/sitemap.xml
+Sitemap: https://eqlabs.ai/sitemap.xml
 
 

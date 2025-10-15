@@ -1,18 +1,18 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>EQLabs.ai — Demo request received</title>
-  <meta name="description" content="Thanks for requesting a demo from EQLabs." />
-  <meta property="og:title" content="EQLabs.ai — Demo request received" />
-  <meta property="og:description" content="We’ll reach out shortly to schedule your demo." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og-image.png" />
-  <link rel="icon" href="/favicon.ico" />
+  <meta name="description" content="Thanks for requesting a demo from EQLabs.ai. We’ll email you shortly to coordinate a walkthrough of our deterministic evaluation benchmark.">
+  <meta property="og:title" content="EQLabs.ai — Demo request received">
+  <meta property="og:description" content="We’ll reach out shortly to schedule your demo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://eqlabs.ai/og-image.png">
+  <link rel="icon" href="/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/scripts/monitor.js" defer=""></script>
+  <script src="/scripts/gate.js" defer=""></script>
 </head>
 
 <body class="bg-white text-slate-900 antialiased selection:bg-black/10">
@@ -48,17 +48,20 @@
 
   <footer class="py-12 border-t border-slate-200">
     <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-      <div>&copy; <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
+      <div>© <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
       <div class="flex items-center gap-4">
-        <a class="hover:underline" target="_blank" href="https://arxiv.org/abs/2501.00257">arXiv</a>
-        <a class="hover:underline" target="_blank" href="https://www.linkedin.com/groups/">LinkedIn</a>
+        <a class="hover:underline" target="_blank" rel="noopener" href="https://arxiv.org/abs/2501.00257">arXiv</a>
+        <a class="hover:underline" target="_blank" rel="noopener" href="https://www.linkedin.com/groups/">LinkedIn</a>
         <a class="hover:underline" href="mailto:info@eqlabs.ai">Email</a>
+        <a class="hover:underline" href="/privacy.html">Privacy</a>
+        <a class="hover:underline" href="/terms.html">Terms</a>
       </div>
     </div>
   </footer>
 
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
 
-</html>
 
+
+
+</body></html>

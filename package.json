@@ -3,7 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "seo:test": "node scripts/seo-check.js"
+    "security:test": "node scripts/security-check.js",
+    "seo:test": "node scripts/seo-check.js",
+    "compliance:test": "node scripts/compliance-check.js",
+    "compliance:fix": "node scripts/compliance-fix.js && node scripts/compliance-check.js",
+    "gate:test": "node scripts/gate-check.js",
+    "test": "npm run security:test && npm run compliance:test && npm run gate:test && npm run seo:test"
   },
   "devDependencies": {
     "cheerio": "1.0.0-rc.12",

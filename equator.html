@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; frame-src https://www.youtube.com; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>EQUATOR Benchmark — EQLabs.ai</title>
+  <meta name="description" content="EQUATOR: a deterministic, blind-study LLM reasoning benchmark with binary criteria, groundedness, and reproducible stats.">
+  <meta property="og:title" content="EQUATOR Benchmark — EQLabs.ai">
+  <meta property="og:description" content="Deterministic, blind-study reasoning benchmark with reproducible evaluation.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://eqlabs.ai/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://eqlabs.ai/equator.html">
+  <link rel="icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/scripts/monitor.js" defer></script>
+  <script src="/scripts/gate.js" defer></script>
+</head>
+
+<body class="bg-white text-slate-900 antialiased selection:bg-black/10">
+  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-7 w-7 rounded-lg bg-black"></div>
+          <span class="font-semibold tracking-tight">EQLabs.ai</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/index.html#about" class="hover:text-black">About</a>
+          <a href="/index.html#research" class="hover:text-black">Research</a>
+          <a href="/index.html#benchmark" class="hover:text-black">Benchmark</a>
+          <a href="/index.html#invest" class="hover:text-black">Invest</a>
+          <a href="/index.html#contact" class="hover:text-black">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-4">
+      <h1 class="text-3xl md:text-4xl font-semibold">EQUATOR Benchmark</h1>
+      <p class="mt-3 text-slate-700 max-w-3xl">A deterministic reasoning benchmark built as a true blind study with scientific rigor: fixed protocols, preregistered analysis, and binary, auditable criteria.</p>
+
+      <section class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <div class="text-slate-500 text-xs uppercase tracking-wider">Design</div>
+          <ul class="mt-2 text-slate-700 list-disc list-inside text-sm">
+            <li>Blind evaluation: annotators unaware of model identity</li>
+            <li>Binary criteria: correctness, completeness, groundedness</li>
+            <li>Predefined prompts and seeds; no cherry‑picking</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <div class="text-slate-500 text-xs uppercase tracking-wider">Statistics</div>
+          <ul class="mt-2 text-slate-700 list-disc list-inside text-sm">
+            <li>Stratified sampling by domain and difficulty</li>
+            <li>Wilson intervals for binary outcomes</li>
+            <li>Multiple‑comparison control (Holm)</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <div class="text-slate-500 text-xs uppercase tracking-wider">Reproducibility</div>
+          <ul class="mt-2 text-slate-700 list-disc list-inside text-sm">
+            <li>Dataset/version locking with manifest</li>
+            <li>Per‑trial logs and hashable configs</li>
+            <li>Open protocol; third‑party replication encouraged</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="mt-12 grid md:grid-cols-2 gap-8">
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h2 class="text-xl font-semibold">Protocol (v1)</h2>
+          <ol class="mt-3 space-y-2 text-slate-700 list-decimal list-inside text-sm">
+            <li>Preregister evaluation plan: tasks, sample size, metrics.</li>
+            <li>Freeze dataset release (manifest.json) and split.</li>
+            <li>Generate answers per model with fixed seeds and retries.</li>
+            <li>Blind adjudication by small local LLMs + human tie‑breakers.</li>
+            <li>Score binary criteria; log rationales and evidence.</li>
+            <li>Aggregate by stratum; compute CIs and significance.</li>
+            <li>Publish report and raw logs with redactions.</li>
+          </ol>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="https://arxiv.org/abs/2501.00257" target="_blank" rel="noopener" class="rounded-full bg-black text-white px-4 py-2">Paper</a>
+            <a href="/meetup.html" class="rounded-full border border-slate-300 px-4 py-2">Join the meetup</a>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h2 class="text-xl font-semibold">Scope</h2>
+          <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside text-sm">
+            <li>Domains: math word problems, tool use, retrieval grounding, safety.</li>
+            <li>Task types: open‑ended QA, stepwise reasoning, code explanations.</li>
+            <li>Non‑goals: synthetic multiple‑choice without reasoning traces.</li>
+          </ul>
+          <p class="mt-3 text-slate-600 text-sm">Contact us to propose new tasks or contribute adjudication scripts.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-12 border-t border-slate-200">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div>© <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" target="_blank" rel="noopener" href="https://arxiv.org/abs/2501.00257">arXiv</a>
+        <a class="hover:underline" target="_blank" rel="noopener" href="https://www.linkedin.com/groups/">LinkedIn</a>
+        <a class="hover:underline" href="mailto:info@eqlabs.ai">Email</a>
+        <a class="hover:underline" href="/privacy.html">Privacy</a>
+        <a class="hover:underline" href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"Dataset",
+    "name":"EQUATOR Benchmark",
+    "description":"Deterministic blind-study LLM reasoning benchmark with binary criteria and reproducible evaluation.",
+    "url":"https://eqlabs.ai/equator.html",
+    "creator": {"@type":"Organization","name":"EQLabs.ai"}
+  }</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+
+</body></html>
+

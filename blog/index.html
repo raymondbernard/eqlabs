@@ -1,14 +1,14 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>EQLabs.ai — Blog</title>
-  <meta name="description" content="EQLabs.ai blog — research notes on deterministic evaluation and LLM reasoning." />
-  <link rel="icon" href="/favicon.ico" />
+  <meta name="description" content="EQLabs.ai blog — research notes on deterministic evaluation and LLM reasoning.">
+  <link rel="icon" href="/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/scripts/monitor.js" defer=""></script>
+  <script src="/scripts/gate.js" defer=""></script>
 </head>
 
 <body class="bg-white text-slate-900 antialiased selection:bg-black/10">
@@ -88,17 +88,20 @@
 
   <footer class="py-12 border-t border-slate-200">
     <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-      <div>&copy; <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
+      <div>© <span id="y"></span> EQLabs.ai — The Equator Intelligence Lab</div>
       <div class="flex items-center gap-4">
         <a class="hover:underline" target="_blank" href="https://arxiv.org/abs/2501.00257">arXiv</a>
         <a class="hover:underline" target="_blank" href="https://www.linkedin.com/groups/">LinkedIn</a>
         <a class="hover:underline" href="mailto:info@eqlabs.ai">Email</a>
+        <a class="hover:underline" href="/privacy.html">Privacy</a>
+        <a class="hover:underline" href="/terms.html">Terms</a>
       </div>
     </div>
   </footer>
 
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</body>
 
-</html>
 
+
+
+</body></html>
