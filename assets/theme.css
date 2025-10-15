@@ -1,0 +1,108 @@
+/* EQLabs OpenAI-inspired theme: minimalist, high-contrast, fluid, subtle motion */
+:root {
+  --bg: #0e0f12;           /* near-black */
+  --panel: #111317;        /* card/background panel */
+  --muted: #8b95a1;        /* slate-400/500 blend */
+  --text: #e6e8eb;         /* off-white */
+  --brand: #10a37f;        /* OpenAI emerald */
+  --brand-strong: #0e8d6e; /* deeper emerald */
+  --ring: rgba(16, 163, 127, 0.35);
+  --border: #1e222a;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(16,163,127,0.07), transparent 60%),
+              radial-gradient(900px 700px at -10% 10%, rgba(16,163,127,0.05), transparent 55%),
+              var(--bg);
+  color: var(--text);
+}
+
+/* Top nav */
+header {
+  background: rgba(14,15,18,0.6) !important;
+  border-bottom: 1px solid var(--border) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Cards and panels */
+.rounded-2xl, .rounded-xl, .rounded-lg {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  border-color: var(--border) !important;
+}
+
+/* Typography tweaks */
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+/* Buttons */
+.bg-black, .bg-slate-900, .bg-slate-800 {
+  background-color: var(--brand) !important;
+}
+.hover\:bg-slate-900:hover, .hover\:bg-black:hover {
+  background-color: var(--brand-strong) !important;
+}
+
+.border-slate-200, .border-slate-300 {
+  border-color: var(--border) !important;
+}
+
+.text-slate-900, .text-slate-800, .text-slate-700, .text-slate-600, .text-slate-500 {
+  color: var(--text) !important;
+  opacity: 0.9;
+}
+
+.selection\:bg-black\/10::selection {
+  background: rgba(16, 163, 127, 0.25) !important;
+}
+
+/* Links */
+a {
+  transition: color .2s ease, opacity .2s ease;
+}
+a:hover {
+  color: var(--brand) !important;
+}
+
+/* Inputs */
+input, textarea, select {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border) !important;
+}
+
+/* Subtle scale on hover for cards */
+.hover\:border-slate-300:hover, .hover\:border-slate-200:hover {
+  transform: translateZ(0) scale(1.01);
+  transition: transform .2s ease, border-color .2s ease;
+  border-color: var(--brand) !important;
+}
+
+/* Badges and chips */
+.rounded-full.border {
+  border-color: var(--border) !important;
+  background: rgba(255,255,255,0.02);
+}
+
+/* Utility: gradient text accent */
+.eq-gradient {
+  background: linear-gradient(90deg, var(--brand), #7ef0d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+

@@ -3,18 +3,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>EQLabs.ai — EQUATOR Meetup & Briefing</title>
-  <meta name="description" content="Join the EQUATOR Benchmark meetup: founder briefing, protocol walkthrough, and hands-on sandbox for creators and press.">
-  <meta property="og:title" content="EQUATOR Meetup & Briefing — EQLabs.ai">
-  <meta property="og:description" content="Live walkthrough of the EQUATOR blind-study benchmark and Q&A.">
+  <title>EQLabs.ai — NYC Feature Meetup (Open‑Source Demo)</title>
+  <meta name="description" content="NYC meetup (venue TBD): open‑source demo of our evaluator and how it signals likely jailbreaks/prompt‑injection and failure modes.">
+  <meta property="og:title" content="NYC Feature Meetup — Open‑Source Demo — EQLabs.ai">
+  <meta property="og:description" content="Hands‑on demo in NYC (venue TBD): evaluator, protocol, and how we flag likely jailbreaks/prompt‑injection.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://eqlabs.ai/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://eqlabs.ai/meetup.html">
   <link rel="icon" href="/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/scripts/monitor.js" defer></script>
-  <script src="/scripts/gate.js" defer></script>
+  <link rel="stylesheet" href="/assets/theme.css">
+  <script src="/scripts/monitor.js" defer=""></script>
+  <script src="/scripts/gate.js" defer=""></script>
 </head>
 
 <body class="bg-white text-slate-900 antialiased selection:bg-black/10">
@@ -36,32 +37,71 @@
 
   <main class="py-16 md:py-24">
     <div class="mx-auto max-w-3xl px-4">
-      <h1 class="text-3xl md:text-4xl font-semibold">EQUATOR Meetup & Briefing</h1>
-      <p class="mt-3 text-slate-700">A private briefing for creators, journalists, and researchers. We will walk through the EQUATOR blind-study protocol, share reproducible artifacts, and co-build a demo.</p>
+      <h1 class="text-3xl md:text-4xl font-semibold">NYC Feature Meetup — Open‑Source Demo</h1>
+      <p class="mt-3 text-slate-700">Join us in New York City — venue TBD — for a hands‑on walkthrough of our open‑source evaluator and protocol. We’ll show how our method signals likely jailbreak/prompt‑injection attempts and other failure modes, with reproducible artifacts you can run.</p>
+
+      <div class="mt-6 rounded-xl border border-slate-200 p-4 text-sm text-slate-700 grid md:grid-cols-2 gap-3">
+        <div><span class="text-slate-500">Where:</span> NYC (venue TBD)</div>
+        <div><span class="text-slate-500">When:</span> TBD — details will be emailed to confirmed RSVPs</div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-4">
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <div class="text-xs uppercase tracking-wider text-slate-500">Investor briefing</div>
+          <h2 class="mt-2 text-lg font-semibold">What you'll see</h2>
+          <ul class="mt-2 text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>Deterministic metrics that separate fluency from reasoning</li>
+            <li>Benchmark + schema as a defensible moat</li>
+            <li>Live logs of failure modes with binary adjudication</li>
+            <li>Early partner interest and pilot pathways</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-3 text-sm">
+            <a href="mailto:invest@eqlabs.ai?subject=Investor%20Intro%20—%20NYC%20Feature%20Meetup" class="rounded-full bg-black text-white px-4 py-2 font-medium hover:bg-slate-900">Investor intro</a>
+            <a href="/founders-circle.html" class="rounded-full border border-slate-300 px-4 py-2 font-medium hover:border-slate-400">Founders Circle</a>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <div class="text-xs uppercase tracking-wider text-slate-500">Press briefing</div>
+          <h2 class="mt-2 text-lg font-semibold">Story angles</h2>
+          <ul class="mt-2 text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>How deterministic evaluators flag likely jailbreaks/injections</li>
+            <li>Reproducible, open‑source artifacts you can rerun</li>
+            <li>Safety without censorship: binary, auditable criteria</li>
+            <li>What current leaderboards miss on open‑ended reasoning</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-3 text-sm">
+            <a href="mailto:info@eqlabs.ai?subject=Press%20RSVP%20—%20NYC%20Feature%20Meetup" class="rounded-full bg-black text-white px-4 py-2 font-medium hover:bg-slate-900">Press RSVP</a>
+            <a href="https://arxiv.org/abs/2501.00257" target="_blank" rel="noopener" class="rounded-full border border-slate-300 px-4 py-2 font-medium hover:border-slate-400">arXiv preprint</a>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">Embargo‑friendly previews available upon request.</p>
+        </div>
+      </div>
 
       <div class="mt-8 rounded-2xl border border-slate-200 p-6">
         <h2 class="text-xl font-semibold">Agenda (60 minutes)</h2>
         <ol class="mt-3 list-decimal list-inside text-slate-700 space-y-1 text-sm">
-          <li>Thesis: why blind, binary, and deterministic</li>
+          <li>Open‑source demo: EQUATOR evaluator sandbox</li>
+          <li>How we flag likely jailbreaks/prompt‑injection and failure modes</li>
           <li>Protocol walkthrough and dataset manifest</li>
-          <li>Live demo: adjudication and logging</li>
-          <li>Q&A and partner next steps</li>
+          <li>Q&amp;A and partner next steps</li>
         </ol>
       </div>
 
       <div class="mt-8 rounded-2xl border border-slate-200 p-6">
         <h2 class="text-xl font-semibold">RSVP</h2>
-        <p class="mt-2 text-slate-700 text-sm">Request an invite; we’ll confirm with details and a calendar hold.</p>
+        <p class="mt-2 text-slate-700 text-sm">Capacity is <span class="font-medium">100</span>. We prioritize <span class="font-medium">press, investors, and researchers</span> working directly on evaluation; others may be waitlisted. Request an invite and we’ll confirm with details and a calendar hold.</p>
         <form id="rsvpForm" name="rsvp" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/demo-thanks.html" class="mt-4 space-y-4" onsubmit="return submitRsvp(event)">
           <input type="hidden" name="form-name" value="rsvp">
+          <input type="hidden" id="audience" name="audience" value="">
+          <input type="hidden" id="priority" name="priority" value="Standard">
           <div class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></div>
           <div>
             <label for="name" class="block text-sm text-slate-600">Name</label>
-            <input id="name" name="name" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+            <input id="name" name="name" required="" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
           </div>
           <div>
             <label for="email" class="block text-sm text-slate-600">Work email</label>
-            <input id="email" name="email" type="email" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+            <input id="email" name="email" type="email" required="" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
           </div>
           <div>
             <label for="affil" class="block text-sm text-slate-600">Affiliation</label>
@@ -69,7 +109,7 @@
           </div>
           <div>
             <label for="role" class="block text-sm text-slate-600">Role</label>
-            <select id="role" name="role" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
+            <select id="role" name="role" required="" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
               <option>Journalist</option>
               <option>YouTube Creator</option>
               <option>Newsletter</option>
@@ -79,17 +119,44 @@
               <option>Investor</option>
             </select>
           </div>
+          <div id="pressFields" class="hidden">
+            <div class="grid md:grid-cols-2 gap-3">
+              <div>
+                <label for="press-outlet" class="block text-sm text-slate-600">Outlet / Channel</label>
+                <input id="press-outlet" name="press-outlet" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+              </div>
+              <div>
+                <label for="press-site" class="block text-sm text-slate-600">Website / Link</label>
+                <input id="press-site" name="press-site" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+              </div>
+            </div>
+          </div>
+          <div id="investorFields" class="hidden">
+            <div class="grid md:grid-cols-2 gap-3">
+              <div>
+                <label for="investor-fund" class="block text-sm text-slate-600">Fund / Firm</label>
+                <input id="investor-fund" name="investor-fund" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+              </div>
+              <div>
+                <label for="investor-site" class="block text-sm text-slate-600">Website</label>
+                <input id="investor-site" name="investor-site" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+              </div>
+            </div>
+          </div>
           <div>
             <label for="notes" class="block text-sm text-slate-600">Notes (angle, questions)</label>
             <textarea id="notes" name="notes" rows="4" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></textarea>
           </div>
+          <div class="text-xs text-slate-600">By requesting an invite you acknowledge seating is limited to 100; we may prioritize press, investors, and evaluation researchers to keep the discussion focused.</div>
           <div class="text-sm text-slate-600 flex items-start gap-2">
-            <input id="privacy-consent" name="privacy-consent" type="checkbox" required class="mt-1" />
+            <input id="privacy-consent" name="privacy-consent" type="checkbox" required="" class="mt-1">
             <label for="privacy-consent">I agree to the <a class="underline" href="/terms.html" target="_blank" rel="noopener">Terms</a> and acknowledge the <a class="underline" href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</label>
           </div>
           <div class="pt-2 flex items-center gap-3">
-            <button type="submit" class="rounded-full bg-black text-white px-5 py-3 text-sm font-medium hover:bg-slate-900">Request invite</button>
-            <a href="mailto:info@eqlabs.ai?subject=EQUATOR%20Meetup%20RSVP" class="text-sm text-slate-700 hover:underline">Or email us</a>
+            <button type="submit" class="rounded-full bg-black text-white px-5 py-3 text-sm font-medium hover:bg-slate-900">Request invite (100 seats)</button>
+            <a href="mailto:info@eqlabs.ai?subject=NYC%20Feature%20Meetup%20RSVP" class="text-sm text-slate-700 hover:underline">Or email us</a>
+            <a href="mailto:invest@eqlabs.ai?subject=Investor%20Intro%20Request%20—%20NYC%20Feature%20Meetup" class="text-sm text-slate-700 hover:underline">Investor intro</a>
+            <a href="mailto:info@eqlabs.ai?subject=Press%20RSVP%20—%20NYC%20Feature%20Meetup" class="text-sm text-slate-700 hover:underline">Press RSVP</a>
           </div>
         </form>
       </div>
@@ -111,24 +178,80 @@
 
   <script>
     function submitRsvp(e){
-      var isNetlify = /netlify\.app$/.test(location.hostname);
-      if (isNetlify) return true;
+      var roleVal = (document.getElementById('role')||{}).value || '';
+      var ap = computeAudienceAndPriority(roleVal);
+      var onLocal = /^(localhost|127\.0\.0\.1)$/i.test(location.hostname) || location.protocol === 'file:';
+      if (!onLocal) return true;
       e.preventDefault();
       var name = document.getElementById('name').value.trim();
       var email = document.getElementById('email').value.trim();
       var affil = document.getElementById('affil').value.trim();
       var role = document.getElementById('role').value;
+      var pressOutlet = (document.getElementById('press-outlet')||{value:''}).value.trim();
+      var pressSite = (document.getElementById('press-site')||{value:''}).value.trim();
+      var investorFund = (document.getElementById('investor-fund')||{value:''}).value.trim();
+      var investorSite = (document.getElementById('investor-site')||{value:''}).value.trim();
       var notes = document.getElementById('notes').value.trim();
-      var subject = encodeURIComponent('EQUATOR Meetup RSVP');
-      var body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nAffiliation: '+affil+'\nRole: '+role+'\nNotes: '+notes+'\n');
+      var subject = encodeURIComponent('NYC Feature Meetup RSVP');
+      var body = encodeURIComponent(
+        'Name: '+name+'\n'
+        + 'Email: '+email+'\n'
+        + 'Affiliation: '+affil+'\n'
+        + 'Role: '+role+'\n'
+        + 'Audience: '+ap.audience+'\n'
+        + 'Priority: '+ap.priority+'\n'
+        + (pressOutlet?('Outlet: '+pressOutlet+'\n'):'')
+        + (pressSite?('Outlet Site: '+pressSite+'\n'):'')
+        + (investorFund?('Fund: '+investorFund+'\n'):'')
+        + (investorSite?('Fund Site: '+investorSite+'\n'):'')
+        + 'Notes: '+notes+'\n'
+      );
       var mailto = 'mailto:info@eqlabs.ai?subject='+subject+'&body='+body;
       window.open(mailto,'_blank');
       window.location.href = '/demo-thanks.html';
       return false;
     }
+    (function(){
+      function updateVisibility(){
+        var role = (document.getElementById('role')||{}).value || '';
+        var press = /Journalist|YouTube Creator|Newsletter|Podcaster/i.test(role);
+        var investor = /Investor/i.test(role);
+        var pressWrap = document.getElementById('pressFields');
+        var investorWrap = document.getElementById('investorFields');
+        if (pressWrap) pressWrap.classList.toggle('hidden', !press);
+        if (investorWrap) investorWrap.classList.toggle('hidden', !investor);
+        var po = document.getElementById('press-outlet');
+        var ps = document.getElementById('press-site');
+        var ifund = document.getElementById('investor-fund');
+        var isite = document.getElementById('investor-site');
+        if (po) po.required = !!press;
+        if (ps) ps.required = !!press;
+        if (ifund) ifund.required = !!investor;
+        if (isite) isite.required = !!investor;
+        var ap = computeAudienceAndPriority(role);
+        var aEl = document.getElementById('audience');
+        var pEl = document.getElementById('priority');
+        if (aEl) aEl.value = ap.audience;
+        if (pEl) pEl.value = ap.priority;
+      }
+      window.computeAudienceAndPriority = function(role){
+        var audience = 'Other';
+        var priority = 'Standard';
+        if (/Journalist|YouTube Creator|Newsletter|Podcaster/i.test(role)) { audience = 'Press'; priority = 'High'; }
+        else if (/Investor/i.test(role)) { audience = 'Investor'; priority = 'High'; }
+        else if (/Researcher/i.test(role)) { audience = 'Research'; priority = 'High'; }
+        else if (/Engineer/i.test(role)) { audience = 'Engineer'; priority = 'Standard'; }
+        return { audience: audience, priority: priority };
+      };
+      document.addEventListener('change', function(ev){ if (ev.target && ev.target.id === 'role') updateVisibility(); });
+      document.addEventListener('DOMContentLoaded', updateVisibility);
+      // Initialize immediately in case DOMContentLoaded already fired
+      setTimeout(updateVisibility, 0);
+    })();
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
 
-</body></html>
 
+
+</body></html>

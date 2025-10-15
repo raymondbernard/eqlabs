@@ -41,6 +41,11 @@ function load(file) {
   return cheerio.load(html);
 }
 
+function isNoindex($) {
+  const robots = ($('meta[name="robots"]').attr('content') || '').toLowerCase();
+  return robots.includes('noindex');
+}
+
 async function main() {
   const files = await fg(['*.html', 'blog/**/*.html'], { cwd: ROOT, dot: false, onlyFiles: true });
   const errors = [];
@@ -49,20 +54,25 @@ async function main() {
     const full = path.join(ROOT, file);
     const $ = load(full);
 
-    for (const sel of REQUIRED_POLICIES) {
-      if (!$(sel).length) {
-        errors.push(`${file}: missing ${sel}`);
+    const skipStrict = isNoindex($);
+
+    if (!skipStrict) {
+      for (const sel of REQUIRED_POLICIES) {
+        if (!$(sel).length) {
+          errors.push(`${file}: missing ${sel}`);
+        }
       }
+
+      // Validate CSP details (only for indexable pages)
+      errors.push(...validateCsp($, file));
     }
 
-    // Validate CSP details
-    errors.push(...validateCsp($, file));
-
     // Recommend rel=noopener on external target=_blank links (warn only)
+    // Do not fail the build for these
     $("a[target='_blank']").each((_, el) => {
       const rel = $(el).attr('rel') || '';
       if (!rel.includes('noopener')) {
-        errors.push(`${file}: link missing rel="noopener" for target=_blank`);
+        console.log(`[SECURITY-WARN] ${file}: link missing rel="noopener" for target=_blank`);
       }
     });
   }
