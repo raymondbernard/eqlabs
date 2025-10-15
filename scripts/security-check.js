@@ -67,6 +67,19 @@ async function main() {
       errors.push(...validateCsp($, file));
     }
 
+    // Disallow dev-only artifacts anywhere
+    if ($('script[src*="/livereload.js"]').length) {
+      errors.push(`${file}: includes dev script /livereload.js`);
+    }
+    const canon = $('link[rel="canonical"]').attr('href') || '';
+    if (/localhost|^http:\\/i.test(canon)) {
+      errors.push(`${file}: canonical uses localhost/http — must be https on production`);
+    }
+    const ogUrl = $('meta[property="og:url"]').attr('content') || '';
+    if (/localhost|^http:\\/i.test(ogUrl)) {
+      errors.push(`${file}: og:url uses localhost/http — must be https on production`);
+    }
+
     // Recommend rel=noopener on external target=_blank links (warn only)
     // Do not fail the build for these
     $("a[target='_blank']").each((_, el) => {

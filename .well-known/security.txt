@@ -1,9 +1,5 @@
 Contact: mailto:security@eqlabs.ai
+Expires: 2026-01-01T00:00:00Z
 Policy: https://eqlabs.ai/security
 Preferred-Languages: en
-Hiring: https://eqlabs.ai/
-Contact: mailto:security@eqlabs.ai
-Preferred-Languages: en
-Canonical: https://eqlabs.ai/.well-known/security.txt
-Policy: https://eqlabs.ai/terms.html
 
