@@ -93,7 +93,7 @@ function ensurePrivacyPage() {
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy","url":"https://eqlabs.ai/privacy.html"}</script>
   </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-black/10">
-  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 border-b border-slate-200">
     <div class="mx-auto max-w-7xl px-4">
       <nav class="h-16 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3">

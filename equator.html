@@ -19,7 +19,7 @@
 </head>
 
 <body class="bg-white text-slate-900 antialiased selection:bg-black/10">
-  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+  <header class="sticky top-0 inset-x-0 z-50 bg-white/90 border-b border-slate-200">
     <div class="mx-auto max-w-7xl px-4">
       <nav class="h-16 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3">
@@ -40,7 +40,7 @@
   <main class="py-16 md:py-24">
     <div class="mx-auto max-w-6xl px-4">
       <h1 class="text-3xl md:text-4xl font-semibold">EQUATOR Benchmark</h1>
-      <p class="mt-3 text-slate-700 max-w-3xl">A deterministic reasoning benchmark built as a true blind study with scientific rigor: fixed protocols, preregistered analysis, and binary, auditable criteria.</p>
+      <p class="mt-3 text-slate-700 max-w-3xl">A deterministic reasoning benchmark built as a true blind study with scientific rigor: preregistered protocols, fixed prompts/seeds, and binary, auditable criteria.</p>
 
       <section class="mt-10 grid md:grid-cols-3 gap-6">
         <div class="rounded-2xl border border-slate-200 p-6">
@@ -48,6 +48,7 @@
           <ul class="mt-2 text-slate-700 list-disc list-inside text-sm">
             <li>Blind evaluation: annotators unaware of model identity</li>
             <li>Binary criteria: correctness, completeness, groundedness</li>
+            <li>Inter‑rater agreement and error taxonomy</li>
             <li>Predefined prompts and seeds; no cherry‑picking</li>
           </ul>
         </div>
@@ -55,7 +56,7 @@
           <div class="text-slate-500 text-xs uppercase tracking-wider">Statistics</div>
           <ul class="mt-2 text-slate-700 list-disc list-inside text-sm">
             <li>Stratified sampling by domain and difficulty</li>
-            <li>Wilson intervals for binary outcomes</li>
+            <li>Wilson intervals for binary outcomes; κ for agreement</li>
             <li>Multiple‑comparison control (Holm)</li>
           </ul>
         </div>

@@ -4,9 +4,9 @@
   --panel: #111317;        /* card/background panel */
   --muted: #8b95a1;        /* slate-400/500 blend */
   --text: #e6e8eb;         /* off-white */
-  --brand: #10a37f;        /* OpenAI emerald */
-  --brand-strong: #0e8d6e; /* deeper emerald */
-  --ring: rgba(16, 163, 127, 0.35);
+  --brand: #1f2937;        /* neutral slate-800 */
+  --brand-strong: #0b0c0f; /* deeper neutral */
+  --ring: rgba(31, 41, 55, 0.35);
   --border: #1e222a;
 }
 
@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  background: radial-gradient(1200px 800px at 80% -10%, rgba(16,163,127,0.07), transparent 60%),
-              radial-gradient(900px 700px at -10% 10%, rgba(16,163,127,0.05), transparent 55%),
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(255,255,255,0.05), transparent 60%),
+              radial-gradient(900px 700px at -10% 10%, rgba(255,255,255,0.03), transparent 55%),
               var(--bg);
   color: var(--text);
 }
@@ -25,7 +25,6 @@ body {
 header {
   background: rgba(14,15,18,0.6) !important;
   border-bottom: 1px solid var(--border) !important;
-  backdrop-filter: blur(10px);
 }
 
 /* Cards and panels */
@@ -57,7 +56,7 @@ h1, h2, h3, h4 {
 }
 
 .selection\:bg-black\/10::selection {
-  background: rgba(16, 163, 127, 0.25) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
 }
 
 /* Links */
@@ -65,7 +64,7 @@ a {
   transition: color .2s ease, opacity .2s ease;
 }
 a:hover {
-  color: var(--brand) !important;
+  color: #cbd5e1 !important; /* slate-300 */
 }
 
 /* Inputs */
@@ -88,7 +87,7 @@ footer {
 .hover\:border-slate-300:hover, .hover\:border-slate-200:hover {
   transform: translateZ(0) scale(1.01);
   transition: transform .2s ease, border-color .2s ease;
-  border-color: var(--brand) !important;
+  border-color: #334155 !important; /* slate-700 */
 }
 
 /* Badges and chips */
@@ -99,7 +98,7 @@ footer {
 
 /* Utility: gradient text accent */
 .eq-gradient {
-  background: linear-gradient(90deg, var(--brand), #7ef0d1);
+  background: linear-gradient(90deg, #f8fafc, #cbd5e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
