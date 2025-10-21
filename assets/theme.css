@@ -111,3 +111,8 @@ footer {
   background-attachment: scroll !important;
 }
 
+/* Global: disable any fixed-background parallax across the site */
+html, body, header, main, section, footer, div {
+  background-attachment: scroll !important;
+}
+
