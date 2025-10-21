@@ -105,3 +105,9 @@ footer {
 }
 
 
+/* Contact section: ensure solid background and no parallax effect */
+#contact {
+  background: var(--panel) !important;
+  background-attachment: scroll !important;
+}
+
