@@ -105,14 +105,8 @@ footer {
 }
 
 
-/* Contact section: ensure solid background and no parallax effect */
-#contact {
-  background: var(--panel) !important;
-  background-attachment: scroll !important;
-}
-
-/* Global: disable any fixed-background parallax across the site */
-html, body, header, main, section, footer, div {
+/* Remove parallax sitewide: ensure all backgrounds scroll normally */
+* {
   background-attachment: scroll !important;
 }
 
